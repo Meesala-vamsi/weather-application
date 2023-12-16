@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@300;400&display=swap');
+body{
+    font-family: 'Roboto';
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (min-width:768px){
+    .forVisibleText{
+        font-size: 60px;
+        width: 50%;
+        line-height: 80px;
+        font-family: "Roboto";
+    }
+}
+@media screen and (max-width:76px) {
+    .forVisibleText{
+        width: 100%;
+        font-size: 20px;
+        line-height: 35px;
+        font-family: "Roboto";
+    }   
+}
+
+
+.bg-container{
+    font-family:'Roboto';
+}

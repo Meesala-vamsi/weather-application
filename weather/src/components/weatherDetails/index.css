@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@300;400&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-container{
+    background-color: #ffffff33;
+    padding:20px;
+    border-radius: 20px;
+    width: 80vw;
+    color: #ffffff;
+    font-family: "Roboto";
+}
+
+.sunny-image{
+    font-size: 70px;
+}
+.location-name{
+    font-size: 20px;
+    align-self: center;
+}
+@media screen and (max-width:768px){
+    .sun-rise-container{
+        background-color: #ffffff33;
+        padding: 17px;
+
+    }
+}
+.sun-rise-container{
+    background-color: #ffffff33;
+    padding: 17px;
+    font-family: "Roboto";
+}
+
+
+.sunsetImage-image{
+    font-size: 30px;
+}
