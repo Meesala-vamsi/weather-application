@@ -64,6 +64,8 @@ const Weather = ()=>{
                 return successView();
             case variables.inProgress:
                 return LoadingView();
+            case variables.failure:
+                return FailureView();
             default:
                 return null
         }
@@ -76,24 +78,20 @@ const Weather = ()=>{
         <WeatherDetails someData={weatherDetails}/>
         </div>
     )
+    const FailureView=()=>(
+        <div className='flex h-screen justify-center items-center'>
+            <h1 className='text-white font-bold font-sans text-xl'>SomeThing Went Wrong!!!</h1>
+        </div>
+    )
 
     const LoadingView=()=>(
         <div className='h-screen flex justify-center items-center'>
             <ClipLoader
         color="#ffffff"
-  
         size={150}
         aria-label="Loading Spinner"
         data-testid="loader"
       />
-        </div>
-    )
-
-    const TextLayer=()=>(
-        <div className='text-white forVisibleText mb-96 lg:mb-64'>
-            <h1 className='font-Roboto'>
-                Search For a City to Know the weather in Different Cities
-            </h1>
         </div>
     )
     
@@ -101,7 +99,7 @@ const Weather = ()=>{
     return(
         <div className='bg-container' style={{backgroundImage:"url('https://res.cloudinary.com/db0f83m76/image/upload/v1702693389/sun-3588618_1920-1200x800_xwfsxv.jpg')"}}>
         <Header/>
-        <div className="p-10 px-20 h-full font-sans flex flex-col items-center "  >
+        <div className="p-10 px-20 h-full font-sans flex flex-col items-center  mb-96 lg:mb-64"  >
              
             <div className='flex flex-col items-center bg-white mb-10 justify-center'>
                 <div className='flex justify-center self-center items-center'>
@@ -125,7 +123,7 @@ const Weather = ()=>{
                 }    
                 </div>
             </div>
-            {hiddenLayers?renderView():TextLayer()}
+           {renderView()}
         </div>
         </div>
 )

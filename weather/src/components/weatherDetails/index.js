@@ -44,8 +44,8 @@ const WeatherDetails=(props)=>{
             </div>
             <p className="text-start font-bold text-md">{getOutput}</p>
             <div className='flex justify-between'>
-                <h1 className="location-name font-bold">{someData.name},<span className="text-sm">{someData.sys.country}</span></h1>
-                <p className="self-center font-bold text-xl">{tempRounded} deg C</p>
+                <h1 className="location-name font-bold text-sm lg:text-xl">{someData.name},<span className="text-sm">{someData.sys.country}</span></h1>
+                <p className="self-center font-bold text-sm lg:text-xl">{tempRounded} deg C</p>
                 <div className="flex flex-col justify-center">
                 <IoIosPartlySunny className='sunny-image text-xl'/>
                 <p className="font-bold self-center">{someData.weather[0].description}</p>
@@ -54,33 +54,33 @@ const WeatherDetails=(props)=>{
            <hr className="border-1 mt-4 mb-4"/>
            <ul className="list-none">
             <li className="flex justify-between">
-                <p className="font-bold text-xl">Wind Speed</p>
-                <p className="font-bold text-xl">{someData.wind.speed} Kmph</p>
+                <p className="font-bold text-sm lg:text-xl">Wind Speed</p>
+                <p className="font-bold text-sm lg:text-xl">{someData.wind.speed} Kmph</p>
             </li>
             <hr className="border-1 mt-4 mb-4"/>
             <li className="flex justify-between">
-                <p className="font-bold text-xl">Pressure</p>
-                <p className="font-bold text-xl">{someData.main.pressure} P</p>
+                <p className="font-bold text-sm lg:text-xl">Pressure</p>
+                <p className="font-bold text-sm lg:text-xl">{someData.main.pressure} P</p>
             </li>
             <hr className="border-1 mt-4 mb-4"/>
             <li className="flex justify-between">
-                <p className="font-bold text-xl">Feels Like</p>
-                <p className="font-bold text-xl">{feelsLike} deg C</p>
+                <p className="font-bold text-sm lg:text-xl">Feels Like</p>
+                <p className="font-bold text-sm lg:text-xl">{feelsLike} deg C</p>
             </li>
             <hr className="border-1 mt-4 mb-4"/>
             <li className="flex justify-between">
-                <p className="font-bold text-xl">Maximum Temperature</p>
-                <p className="font-bold text-xl">{Math.round(someData.main.temp_max,2)} deg C</p>
+                <p className="font-bold text-sm lg:text-xl">Maximum Temperature</p>
+                <p className="font-bold text-sm lg:text-xl">{Math.round(someData.main.temp_max,2)} deg C</p>
             </li>
             <hr className="border-1 mt-4 mb-4"/>
             <li className="flex justify-between">
-                <p className="font-bold text-xl">Minimum Temperature</p>
-                <p className="font-bold text-xl">{Math.round(someData.main.temp_min,2)} deg C</p>
+                <p className="font-bold text-sm lg:text-xl">Minimum Temperature</p>
+                <p className="font-bold text-sm lg:text-xl">{Math.round(someData.main.temp_min,2)} deg C</p>
             </li>
             <hr className="border-1 mt-4 mb-4"/>
             <li className="flex justify-between">
-                <p className="font-bold text-xl">Visibility</p>
-                <p className="font-bold text-xl">{someData.visibility} VI</p>
+                <p className="font-bold text-sm lg:text-xl">Visibility</p>
+                <p className="font-bold text-sm lg:text-xl">{someData.visibility} VI</p>
             </li>
            </ul>
         </div>
